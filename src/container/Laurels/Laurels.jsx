@@ -1,8 +1,9 @@
 import React from "react";
 
-import { images, data } from "./../../constants";
-import "./Laurels.css";
 import { SubHeading } from "../../components";
+import { images, data } from "./../../constants";
+
+import "./Laurels.css";
 
 const AwardCard = ({ award: { imgUrl, title, subtitle }, key }) => {
   return (
