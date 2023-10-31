@@ -13,7 +13,7 @@ const Chef = () => {
 
       <div className="app__wrapper_info">
         <SubHeading title="Chef's word" />
-        <h1 className="headtext__cormorant">What We Believe In</h1>
+        <p className="headtext__cormorant">What We Believe In</p>
 
         <div className="app__chef-content">
           <div className="app__chef-content_quote">
