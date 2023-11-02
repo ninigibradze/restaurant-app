@@ -16,13 +16,16 @@
   width: 80%;
 }
 
+.header__arrow-icon-container {
+  margin-top: 70%;
+}
+
 .header__arrow-icon {
   color: var(--color-black);
   font-size: 3rem;
   cursor: pointer;
   background: var(--color-golden);
   margin-right: 0.5rem;
-  margin-top: 70%;
   padding: 5px;
   transition: 0.2s;
 }
@@ -48,6 +51,18 @@
   .app__header-h1 {
     font-size: 70px;
     line-height: 87px;
+  }
+
+  .app__wrapper_img {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header__arrow-icon-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
   }
 }
 
