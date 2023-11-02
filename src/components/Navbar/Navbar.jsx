@@ -30,6 +30,9 @@ const Navbar = () => {
         <li className="app__opensans">
           <a href="#contact">Contact</a>
         </li>
+        <li className="app__opensans">
+          <a href="#home">Blog</a>
+        </li>
       </ul>
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">
@@ -71,6 +74,9 @@ const Navbar = () => {
               </li>
               <li className="app__opensans">
                 <a href="#contact">Contact</a>
+              </li>
+              <li className="app__opensans">
+                <a href="#home">Blog</a>
               </li>
             </ul>
           </div>

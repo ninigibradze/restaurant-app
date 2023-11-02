@@ -38,21 +38,21 @@ const Header = () => {
     if (value === "minus") {
       if (bigImage === 0) {
         setBigImage(3);
-        setActiveCont(3)
+        setActiveCont(3);
         return;
       } else {
         setBigImage((prev) => prev - 1);
-        setActiveCont((prev) => prev - 1)
+        setActiveCont((prev) => prev - 1);
         return;
       }
     } else if (value === "plus") {
       if (bigImage === 3) {
         setBigImage(0);
-        setActiveCont(0)
+        setActiveCont(0);
         return;
       } else {
         setBigImage((prev) => prev + 1);
-        setActiveCont((prev) => prev + 1)
+        setActiveCont((prev) => prev + 1);
         return;
       }
     }

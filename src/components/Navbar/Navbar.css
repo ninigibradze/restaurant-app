@@ -29,6 +29,7 @@
 .app__navbar-links li {
   margin: 0 1rem;
   cursor: pointer;
+  font-size: 1.3rem;
 }
 
 .app__navbar-links li:hover {
