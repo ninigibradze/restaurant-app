@@ -1,0 +1,88 @@
+.app__footer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-black);
+  padding: 5rem 0;
+}
+
+.app__booking {
+  z-index: 1;
+  padding: 2rem 4rem;
+  border: 1px solid var(--color-golden);
+  background: var(--color-black);
+}
+
+.app__booking-heading {
+  text-align: center;
+}
+
+.app__booking-input {
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.app__booking-input input,
+.app__booking-input select {
+  width: 250px;
+  border: 1px solid var(--color-golden);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: var(--font-base);
+  color: var(--color-white);
+  margin-right: 2rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-black);
+}
+
+.app__booking-dropdown {
+  display: flex;
+  flex-direction: row;
+}
+
+.app__booking-input button {
+  width: max-content;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 2000px) {
+  .app__booking-input input {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .app__booking-input {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .app__booking-input input,
+  .app__booking-input select {
+    margin: 0 0 2rem 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__booking {
+    padding: 2rem 0;
+    border: none;
+  }
+
+  .app__booking-dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .app__booking-heading h1 {
+    font-size: 32px;
+    line-height: 50px;
+  }
+}

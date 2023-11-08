@@ -44,7 +44,7 @@
 
   .app__newsletter-input input {
     margin: 0 0 2rem 0;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -61,5 +61,4 @@
     line-height: 50px;
   }
 
-  /* 6.12 */
 }

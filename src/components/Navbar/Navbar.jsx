@@ -5,6 +5,7 @@ import { MdOutlineRestaurantMenu } from "react-icons/md";
 import images from "./../../constants/images";
 
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -16,32 +17,47 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         <li className="app__opensans">
-          <a href="#home">Home</a>
+          <Link to="/">
+            <a href="#home">Home</a>
+          </Link>
+        </li>
+        <Link to="/#about">
+          <li className="app__opensans">
+            <p>About</p>
+          </li>{" "}
+        </Link>
+        <li className="app__opensans">
+          <Link to="/">
+            <a href="#menu">Menu</a>
+          </Link>
         </li>
         <li className="app__opensans">
-          <a href="#about">About</a>
+          <Link to="/">
+            <a href="#awards">Awards</a>
+          </Link>
         </li>
         <li className="app__opensans">
-          <a href="#menu">Menu</a>
+          <Link to="/">
+            <a href="#contact">Contact</a>
+          </Link>
         </li>
         <li className="app__opensans">
-          <a href="#awards">Awards</a>
-        </li>
-        <li className="app__opensans">
-          <a href="#contact">Contact</a>
-        </li>
-        <li className="app__opensans">
-          <a href="#home">Blog</a>
+          <Link to="/">
+            <a href="#home">Blog</a>
+          </Link>
         </li>
       </ul>
       <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">
-          Log in / Register
-        </a>
+        <Link to="/">
+          <a href="#login" className="p__opensans">
+            Log in / Register
+          </a>
+        </Link>
+
         <div></div>
-        <a href="/" className="p__opensans">
-          Book Table
-        </a>
+        <Link to={"/booking"}>
+          <p className="p__opensans">Book Table</p>
+        </Link>
       </div>
 
       {/* hamburger menu for small screens */}
@@ -61,22 +77,34 @@ const Navbar = () => {
             />
             <ul className="app__navbar-smallscreen_links">
               <li className="app__opensans">
-                <a href="#home">Home</a>
+                <Link to="/">
+                  <a href="#home">Home</a>
+                </Link>
               </li>
               <li className="app__opensans">
-                <a href="#about">About</a>
+                <Link to="/">
+                  <a href="#about">About</a>
+                </Link>
               </li>
               <li className="app__opensans">
-                <a href="#menu">Menu</a>
+                <Link to="/">
+                  <a href="#menu">Menu</a>
+                </Link>
               </li>
               <li className="app__opensans">
-                <a href="#awards">Awards</a>
+                <Link to="/">
+                  <a href="#awards">Awards</a>
+                </Link>
               </li>
               <li className="app__opensans">
-                <a href="#contact">Contact</a>
+                <Link to="/">
+                  <a href="#contact">Contact</a>
+                </Link>
               </li>
               <li className="app__opensans">
-                <a href="#home">Blog</a>
+                <Link to="/">
+                  <a href="#home">Blog</a>
+                </Link>
               </li>
             </ul>
           </div>
