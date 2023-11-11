@@ -48,16 +48,14 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="app__navbar-login">
-        <Link to="/">
-          <a href="#login" className="p__opensans">
-            Log in / Register
-          </a>
-        </Link>
+        <p href="#login" className="p__opensans">
+          Log in / Register
+        </p>
 
         <div></div>
-        <Link to={"/booking"}>
-          <p className="p__opensans">Book Table</p>
-        </Link>
+        <p href="#login" className="p__opensans">
+          <Link to="/booking">Book Table</Link>
+        </p>
       </div>
 
       {/* hamburger menu for small screens */}
