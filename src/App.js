@@ -31,8 +31,8 @@ function App() {
       </Routes>
 
       {showButton && (
-        <div className={"scrollToTop"}>
-          <button className="scroll-to-top-button" onClick={handleScrollToTop}>
+        <div className="scroll-to-top-button-div"  onClick={handleScrollToTop}>
+          <button className="scroll-to-top-button">
             TOP
           </button>
         </div>
