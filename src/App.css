@@ -101,6 +101,30 @@
   width: 45px;
 }
 
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  z-index: 10;
+  cursor: pointer;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  font-size: 15px;
+}
+
+.scroll-to-top-button::before {
+  content: "";
+  background: linear-gradient(180deg,#dcca87,#dcca87,rgba(220,202,135,.84));
+  position: absolute;
+  left: 24px;
+  bottom: 50px;
+  height: 50px;
+  width: 1px;
+}
+
 @media screen and (min-width: 2000px) {
   .custom__button,
   .p__cormorant {

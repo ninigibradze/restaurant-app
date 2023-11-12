@@ -6,6 +6,7 @@ import images from "./../../constants/images";
 
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -17,45 +18,46 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         <li className="app__opensans">
-          <Link to="/">
-            <a href="#home">Home</a>
-          </Link>
-        </li>
-        <Link to="/#about">
-          <li className="app__opensans">
-            <p>About</p>
-          </li>{" "}
-        </Link>
-        <li className="app__opensans">
-          <Link to="/">
-            <a href="#menu">Menu</a>
-          </Link>
+          <HashLink smooth to="/#home">
+            Home
+          </HashLink>
         </li>
         <li className="app__opensans">
-          <Link to="/">
-            <a href="#awards">Awards</a>
-          </Link>
+          <HashLink smooth to="/#about">
+            About
+          </HashLink>
         </li>
         <li className="app__opensans">
-          <Link to="/">
-            <a href="#contact">Contact</a>
-          </Link>
+          <HashLink smooth to="/#menu">
+            Menu
+          </HashLink>
         </li>
         <li className="app__opensans">
-          <Link to="/">
-            <a href="#home">Blog</a>
-          </Link>
+          <HashLink smooth to="/#awards">
+            Awards
+          </HashLink>
+        </li>
+        <li className="app__opensans">
+          <HashLink smooth to="/#contact">
+            Contact
+          </HashLink>
+        </li>
+        <li className="app__opensans">
+          <HashLink smooth to="/#blog">
+            Blog
+          </HashLink>
         </li>
       </ul>
       <div className="app__navbar-login">
         <p href="#login" className="p__opensans">
           Log in / Register
         </p>
-
         <div></div>
-        <p href="#login" className="p__opensans">
-          <Link to="/booking">Book Table</Link>
-        </p>
+        <Link to="/booking">
+          <p href="#login" className="p__opensans">
+            Book Table
+          </p>
+        </Link>
       </div>
 
       {/* hamburger menu for small screens */}
@@ -75,34 +77,58 @@ const Navbar = () => {
             />
             <ul className="app__navbar-smallscreen_links">
               <li className="app__opensans">
-                <Link to="/">
-                  <a href="#home">Home</a>
-                </Link>
+                <HashLink
+                  smooth
+                  to="/#home"
+                  onClick={() => setToggleMenu(false)}
+                >
+                  Home
+                </HashLink>
               </li>
               <li className="app__opensans">
-                <Link to="/">
-                  <a href="#about">About</a>
-                </Link>
+                <HashLink
+                  smooth
+                  to="/#about"
+                  onClick={() => setToggleMenu(false)}
+                >
+                  About
+                </HashLink>
               </li>
               <li className="app__opensans">
-                <Link to="/">
-                  <a href="#menu">Menu</a>
-                </Link>
+                <HashLink
+                  smooth
+                  to="/#menu"
+                  onClick={() => setToggleMenu(false)}
+                >
+                  Menu
+                </HashLink>
               </li>
               <li className="app__opensans">
-                <Link to="/">
-                  <a href="#awards">Awards</a>
-                </Link>
+                <HashLink
+                  smooth
+                  to="/#awards"
+                  onClick={() => setToggleMenu(false)}
+                >
+                  Awards
+                </HashLink>
               </li>
               <li className="app__opensans">
-                <Link to="/">
-                  <a href="#contact">Contact</a>
-                </Link>
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  onClick={() => setToggleMenu(false)}
+                >
+                  Contact
+                </HashLink>
               </li>
               <li className="app__opensans">
-                <Link to="/">
-                  <a href="#home">Blog</a>
-                </Link>
+                <HashLink
+                  smooth
+                  to="/#blog"
+                  onClick={() => setToggleMenu(false)}
+                >
+                  Blog
+                </HashLink>
               </li>
             </ul>
           </div>
