@@ -1,0 +1,91 @@
+.app__footer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color-black);
+    padding: 5rem 0;
+  }
+  
+  .app__register {
+    z-index: 1;
+    padding: 2rem 4rem;
+    border: 1px solid var(--color-golden);
+    background: var(--color-black);
+  }
+  
+  .app__register-heading {
+    text-align: center;
+  }
+  
+  .app__register-input {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .app__register-input input {
+    width: 620px;
+    border: 1px solid var(--color-golden);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-base);
+    color: var(--color-white);
+    margin-right: 2rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-black);
+  }
+  
+  .app__register-input button {
+    width: max-content;
+    margin: 2rem 0 0 0;
+  }
+  
+  .app__register-login_p {
+    color: var(--color-white);
+    font-family: var(--font-base);
+  }
+  
+  .app__register-login_p span {
+    color: var(--color-golden);
+    cursor: pointer;
+  }
+  
+  @media screen and (min-width: 2000px) {
+    .app__register-input input {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+    .app__register-input {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .app__register-input input {
+      margin: 0 0 2rem 0;
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .app__register {
+      padding: 2rem 0;
+      border: none;
+    }
+    .app__register-input {
+      gap: 0;
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .app__register-heading h1 {
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+  

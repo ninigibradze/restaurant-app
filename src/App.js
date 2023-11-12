@@ -3,6 +3,8 @@ import "./App.css";
 import Home from "./Home";
 import Booking from "./components/Booking/Booking";
 import { useEffect, useState } from "react";
+import User from "./components/User/User";
+import Register from "./components/Registration/Register";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -28,6 +30,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
 
       {showButton && (

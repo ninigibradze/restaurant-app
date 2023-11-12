@@ -1,20 +1,33 @@
-.app__newsletter {
+.app__footer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-black);
+  padding: 5rem 0;
+}
+
+.app__user {
   z-index: 1;
   padding: 2rem 4rem;
   border: 1px solid var(--color-golden);
   background: var(--color-black);
 }
 
-.app__newsletter-heading {
+.app__user-heading {
   text-align: center;
 }
 
-.app__newsletter-input {
-  flex-direction: row;
+.app__user-input {
+  flex-direction: column;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
-.app__newsletter-input input {
+.app__user-input input {
   width: 620px;
   border: 1px solid var(--color-golden);
   border-radius: 5px;
@@ -26,37 +39,51 @@
   background: var(--color-black);
 }
 
-.app__newsletter-input button {
+.app__user-input button {
   width: max-content;
+  margin: 2rem 0 0 0;
+}
+
+.app__user-register_p {
+  color: var(--color-white);
+  font-family: var(--font-base);
+}
+
+.app__user-register_p span {
+  color: var(--color-golden);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 2000px) {
-  .app__newsletter-input input {
+  .app__user-input input {
     font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 990px) {
-  .app__newsletter-input {
+  .app__user-input {
     flex-direction: column;
     width: 100%;
   }
 
-  .app__newsletter-input input {
+  .app__user-input input {
     margin: 0 0 2rem 0;
     width: 90%;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .app__newsletter {
+  .app__user {
     padding: 2rem 0;
     border: none;
+  }
+  .app__user-input {
+    gap: 0;
   }
 }
 
 @media screen and (max-width: 300px) {
-  .app__newsletter-heading h1 {
+  .app__user-heading h1 {
     font-size: 32px;
     line-height: 50px;
   }

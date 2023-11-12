@@ -49,14 +49,12 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="app__navbar-login">
-        <p href="#login" className="p__opensans">
-          Log in / Register
-        </p>
+        <Link to="/user">
+          <p className="p__opensans">Log in / Register</p>
+        </Link>
         <div></div>
         <Link to="/booking">
-          <p href="#login" className="p__opensans">
-            Book Table
-          </p>
+          <p className="p__opensans">Book Table</p>
         </Link>
       </div>
 
