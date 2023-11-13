@@ -5,6 +5,9 @@ import Booking from "./components/Booking/Booking";
 import { useEffect, useState } from "react";
 import User from "./components/User/User";
 import Register from "./components/Registration/Register";
+import ProtectedRoute from "./protectedRoute";
+import { Blog } from "./components/Blog/Blog";
+import Post from "./components/Post/Post";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -32,6 +35,10 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/user" element={<User />} />
         <Route path="/register" element={<Register />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/blog/:id' element={<Post />} />
+        </Route>
       </Routes>
 
       {showButton && (

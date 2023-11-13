@@ -59,7 +59,7 @@ const Navbar = () => {
           </HashLink>
         </li>
         <li className="app__opensans">
-          <HashLink smooth to="/#blog">
+          <HashLink smooth to="/blog">
             Blog
           </HashLink>
         </li>
@@ -141,7 +141,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/#blog"
+                  to="/blog"
                   onClick={() => setToggleMenu(false)}
                 >
                   Blog
