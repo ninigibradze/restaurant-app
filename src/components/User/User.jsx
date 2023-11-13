@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./User.css";
 import Navbar from "../Navbar/Navbar";
 import { FindUs, Footer } from "../../container";
 import SubHeading from "../SubHeading/SubHeading";
 import { useDispatch } from "react-redux";
-import { login } from "../../features/userSlice";
-import { Link } from "react-router-dom";
+import { checkLogIn, login } from "../../features/userSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 const initialState = {
   email: "",
@@ -14,7 +14,9 @@ const initialState = {
 
 const User = () => {
   const [userInfo, setUserInfo] = useState(initialState);
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,7 +28,28 @@ const User = () => {
 
   const handleLogIn = (e) => {
     e.preventDefault();
-    dispatch(login(userInfo));
+
+    const { email, password } = userInfo;
+    const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
+
+    if (
+      storedUser &&
+      storedUser.email === email &&
+      storedUser.password === password
+    ) {
+      localStorage.setItem("logedInUser", JSON.stringify(userInfo));
+      dispatch(login(userInfo));
+      setUserInfo({ email: "", password: "" });
+      navigate("/");
+    } else {
+      if (!storedUser || storedUser.email !== email) {
+        alert("User doesn't excist");
+      } else {
+        if (storedUser.password !== password) {
+          alert("Incorrect password");
+        }
+      }
+    }
   };
 
   return (

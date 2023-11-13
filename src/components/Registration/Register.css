@@ -47,11 +47,18 @@
   .app__register-login_p {
     color: var(--color-white);
     font-family: var(--font-base);
+    margin-top: 1rem;
   }
   
   .app__register-login_p span {
     color: var(--color-golden);
     cursor: pointer;
+  }
+
+  .app__register-success {
+    font-size: 15px;
+    font-weight: 600;
+    color: green;
   }
   
   @media screen and (min-width: 2000px) {

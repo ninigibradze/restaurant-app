@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
@@ -7,14 +7,30 @@ import images from "./../../constants/images";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { useDispatch, useSelector } from "react-redux";
+import { checkLogIn, logout } from "../../features/userSlice";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  const userInfo = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkLogIn());
+  }, [userInfo]);
+
+  const handleLogOut = () => {
+    localStorage.removeItem("logedInUser");
+    dispatch(logout());
+  };
+
   return (
     <div className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.gericht} alt="app logo" />
+        <Link to="/">
+          <img src={images.gericht} alt="app logo" />
+        </Link>
       </div>
       <ul className="app__navbar-links">
         <li className="app__opensans">
@@ -50,8 +66,11 @@ const Navbar = () => {
       </ul>
       <div className="app__navbar-login">
         <Link to="/user">
-          <p className="p__opensans">Log in / Register</p>
+          <p className="p__opensans" onClick={() => handleLogOut()}>
+            {userInfo.loggedIn ? "Sign Out" : "Log in / Register"}
+          </p>
         </Link>
+
         <div></div>
         <Link to="/booking">
           <p className="p__opensans">Book Table</p>
@@ -129,6 +148,18 @@ const Navbar = () => {
                 </HashLink>
               </li>
             </ul>
+            <div className="app__navbar-login-smallscreen">
+              <Link to="/user">
+                <p className="p__opensans" onClick={() => handleLogOut()}>
+                  {userInfo.loggedIn ? "Sign Out" : "Log in / Register"}
+                </p>
+              </Link>
+
+              <div></div>
+              <Link to="/booking">
+                <p className="p__opensans">Book Table</p>
+              </Link>
+            </div>
           </div>
         )}
       </div>

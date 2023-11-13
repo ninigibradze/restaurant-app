@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import "./Register.css";
+import { Link } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+
 import Navbar from "../Navbar/Navbar";
 import { FindUs, Footer } from "../../container";
 import SubHeading from "../SubHeading/SubHeading";
-import { useDispatch } from "react-redux";
-import { register } from "../../features/userSlice";
-import { Link } from "react-router-dom";
+
+import "./Register.css";
 
 const initialState = {
   email: "",
@@ -15,7 +17,7 @@ const initialState = {
 
 const Register = () => {
   const [userInfo, setUserInfo] = useState(initialState);
-  const dispatch = useDispatch();
+  const [successMessage, setSuccessMessage] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -25,9 +27,55 @@ const Register = () => {
     }));
   };
 
+  const emailValidation = (email) => {
+    return String(email)
+      .toLocaleLowerCase()
+      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+  };
+
   const handleRegister = (e) => {
     e.preventDefault();
-    dispatch(register(userInfo));
+
+    const { email, password, confirm } = userInfo;
+
+    if (!email) {
+      return alert("Please, enter your email");
+    } else {
+      if (!emailValidation(email)) {
+        return alert("Enter valid email");
+      }
+    }
+
+    if (!password) {
+      return alert("Please, enter your password");
+    } else {
+      if (password.length < 6) {
+        return alert("Password should be at least 6 symbols");
+      }
+    }
+
+    if (!confirm) {
+      return alert("Please confirm your password");
+    } else {
+      if (confirm !== password) {
+        return alert("Password doesn't match");
+      }
+    }
+
+    if (
+      email &&
+      emailValidation(email) &&
+      password &&
+      confirm &&
+      password.length >= 6 &&
+      confirm === password
+    ) {
+      localStorage.setItem("registeredUser", JSON.stringify({ email, password }));
+      setSuccessMessage(true);
+      setUserInfo(initialState);
+    } else {
+      return alert("Error. Check your inputs");
+    }
   };
 
   return (
@@ -67,6 +115,9 @@ const Register = () => {
             >
               Register
             </button>
+            {successMessage && (
+              <p className="app__register-success">Successfully registered</p>
+            )}
             <p className="app__register-login_p">
               Already have an account?{" "}
               <Link to="/user">
