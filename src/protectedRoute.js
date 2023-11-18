@@ -17,7 +17,7 @@ const ProtectedRoute = () => {
 
   if (!isLoggedIn) {
     alert("Please, log in or register");
-    return <Navigate to="/" replace />;
+    return <Navigate to="/restaurant-app" replace />;
   }
   return <Outlet />;
 };
