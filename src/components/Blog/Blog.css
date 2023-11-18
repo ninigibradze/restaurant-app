@@ -28,7 +28,14 @@
   width: 90%;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
+
+.blog_post-div img:hover {
+  transition-duration: 500ms;
+  transform: scale(1.01);
+}
+
 
 .blog_toplayer-p {
   position: absolute;

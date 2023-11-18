@@ -81,40 +81,82 @@ const awards = [
 
 const blogPosts = [
   {
+    id: 1,
     imgUrl: images.blog1,
     title: "Tips For Prepping And Caring For Your Grill",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt pharetra ut lobortis id. Commodo sit libero lacus a egestas penatibus pretium quis lorem. Purus morbi sagittis, faucibus odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Tincidunt pharetra ut lobortis id.
+    Commodo sit libero lacus a egestas penatibus pretium quis lorem.
+      `,
   },
   {
+    id: 2,
     imgUrl: images.blog2,
     title: "Summer Cocktails And Mocktails",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt pharetra ut lobortis id. Commodo sit libero lacus a egestas penatibus pretium quis lorem. Purus morbi sagittis, faucibus odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Tincidunt pharetra ut lobortis id.
+    Commodo sit libero lacus a egestas penatibus pretium quis lorem.
+      `,
   },
   {
+    id: 3,
     imgUrl: images.blog3,
     title: "How To Make Your Food Photographs Look Aesthetic",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt pharetra ut lobortis id. Commodo sit libero lacus a egestas penatibus pretium quis lorem. Purus morbi sagittis, faucibus odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Tincidunt pharetra ut lobortis id.
+    Commodo sit libero lacus a egestas penatibus pretium quis lorem.
+      `,
   },
   {
+    id: 4,
     imgUrl: images.blog4,
     title: "Co-Ordination & Teamwork Tips From A Sous Chef",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt pharetra ut lobortis id. Commodo sit libero lacus a egestas penatibus pretium quis lorem. Purus morbi sagittis, faucibus odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Tincidunt pharetra ut lobortis id.
+    Commodo sit libero lacus a egestas penatibus pretium quis lorem.
+      `,
   },
   {
+    id: 5,
     imgUrl: images.blog5,
     title: "Will Food Restaurant Ever Rule The World?",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt pharetra ut lobortis id. Commodo sit libero lacus a egestas penatibus pretium quis lorem. Purus morbi sagittis, faucibus odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Tincidunt pharetra ut lobortis id.
+    Commodo sit libero lacus a egestas penatibus pretium quis lorem.
+      `,
   },
   {
+    id: 6,
     imgUrl: images.blog6,
     title: "5 Secrets That Experts Of Food Restaurant You Don’t Know",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt pharetra ut lobortis id. Commodo sit libero lacus a egestas penatibus pretium quis lorem. Purus morbi sagittis, faucibus odio.
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Tincidunt pharetra ut lobortis id.
+    Commodo sit libero lacus a egestas penatibus pretium quis lorem.
+      `,
   },
 ];
 

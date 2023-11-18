@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./User.css";
 import Navbar from "../Navbar/Navbar";
 import { FindUs, Footer } from "../../container";
 import SubHeading from "../SubHeading/SubHeading";
 import { useDispatch } from "react-redux";
-import { checkLogIn, login } from "../../features/userSlice";
+import { login } from "../../features/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 const initialState = {

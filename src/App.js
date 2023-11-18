@@ -7,12 +7,17 @@ import User from "./components/User/User";
 import Register from "./components/Registration/Register";
 import ProtectedRoute from "./protectedRoute";
 import Blog from "./components/Blog/Blog";
-// import Post from "./components/Post/Post";
+import { useDispatch } from "react-redux";
+import { checkLogIn } from "./features/userSlice";
+import Post from "./components/Post/Post";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
+  const dispach = useDispatch()
 
   useEffect(() => {
+    dispach(checkLogIn());
+
     const handleButtonVisiblity = () => {
       window.scrollY > 250 ? setShowButton(true) : setShowButton(false);
     };
@@ -37,7 +42,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/blog" element={<Blog />} />
-          {/* <Route path='/blog/:id' element={<Post />} /> */}
+          <Route path='/blog/:id' element={<Post />} />
         </Route>
       </Routes>
 

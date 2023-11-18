@@ -2,9 +2,16 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import { FindUs, Footer } from "../../container";
 import { data } from "./../../constants";
+import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 
 const Blog = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (id) => {
+    navigate(`/blog/${id}`)
+  };
+
   return (
     <>
       <Navbar />
@@ -13,13 +20,13 @@ const Blog = () => {
           {data.blogPosts.map((post, index) => {
             return (
               <div key={post.title + index} className="blog_post-div">
-                <img src={post.imgUrl} alt="blogimg" />
+                <img src={post.imgUrl} alt="blogimg"  onClick={() => handleNavigate(post.id)} />
                 <p className="p__opensans blog_toplayer-p">1 SEP</p>
                 <div className="blog_info-p">
                   <p className="p__opensans">admin</p>
                   <p className="blog_title">{post.title}</p>
                   <p className="p__opensans">{post.subtitle}</p>
-                  <p className="blog_more">Read More</p>
+                  <p className="blog_more" onClick={() => handleNavigate(post.id)}>Read More</p>
                 </div>
               </div>
             );

@@ -1,10 +1,21 @@
-import { useSelector } from "react-redux";
+import { useMemo } from "react";
+import { useDispatch } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
+import { login } from "./features/userSlice";
 
 const ProtectedRoute = () => {
-  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
 
-  if (!user.loggedIn) {
+  const isLoggedIn = useMemo(() => {
+    const storedUser = JSON.parse(localStorage.getItem("logedInUser"));
+    if (storedUser) {
+      dispatch(login(storedUser));
+      return true;
+    }
+    return false;
+  }, []);
+
+  if (!isLoggedIn) {
     alert("Please, log in or register");
     return <Navigate to="/" replace />;
   }
