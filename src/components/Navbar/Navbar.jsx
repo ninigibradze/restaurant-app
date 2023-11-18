@@ -65,14 +65,14 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="app__navbar-login">
-        <Link to="/user">
+        <Link to="/restaurant-app/user">
           <p className="p__opensans" onClick={() => handleLogOut()}>
             {userInfo.loggedIn ? "Sign Out" : "Log in / Register"}
           </p>
         </Link>
 
         <div></div>
-        <Link to="/booking">
+        <Link to="/restaurant-app/booking">
           <p className="p__opensans">Book Table</p>
         </Link>
       </div>
@@ -149,14 +149,14 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="app__navbar-login-smallscreen">
-              <Link to="/user">
+              <Link to="/restaurant-app/user">
                 <p className="p__opensans" onClick={() => handleLogOut()}>
                   {userInfo.loggedIn ? "Sign Out" : "Log in / Register"}
                 </p>
               </Link>
 
               <div></div>
-              <Link to="/booking">
+              <Link to="/restaurant-app/booking">
                 <p className="p__opensans">Book Table</p>
               </Link>
             </div>
