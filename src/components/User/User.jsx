@@ -40,7 +40,7 @@ const User = () => {
       localStorage.setItem("logedInUser", JSON.stringify(userInfo));
       dispatch(login(userInfo));
       setUserInfo({ email: "", password: "" });
-      navigate("/");
+      navigate("/restaurant-app");
     } else {
       if (!storedUser || storedUser.email !== email) {
         alert("User doesn't excist");
