@@ -81,7 +81,7 @@ const User = () => {
             </button>
             <p className="app__user-register_p">
               New User?{" "}
-              <Link to="/register">
+              <Link to="/restaurant-app/register">
                 <span>Register</span>{" "}
               </Link>
               here

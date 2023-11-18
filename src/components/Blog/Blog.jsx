@@ -9,7 +9,7 @@ const Blog = () => {
   const navigate = useNavigate();
 
   const handleNavigate = (id) => {
-    navigate(`/blog/${id}`)
+    navigate(`/restaurant-app/blog/${id}`)
   };
 
   return (

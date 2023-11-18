@@ -38,7 +38,7 @@ const Post = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(`/blog`)
+    navigate(`/restaurant-app/blog`)
   };
 
 

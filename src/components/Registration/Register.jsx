@@ -120,7 +120,7 @@ const Register = () => {
             )}
             <p className="app__register-login_p">
               Already have an account?{" "}
-              <Link to="/user">
+              <Link to="/restaurant-app/user">
                 <span>Login</span>{" "}
               </Link>
               here

@@ -36,13 +36,13 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/restaurant-app" element={<Home />} />
+        <Route path="/restaurant-app/booking" element={<Booking />} />
+        <Route path="/restaurant-app/user" element={<User />} />
+        <Route path="/restaurant-app/register" element={<Register />} />
         <Route element={<ProtectedRoute />}>
-          <Route path="/blog" element={<Blog />} />
-          <Route path='/blog/:id' element={<Post />} />
+          <Route path="/restaurant-app/blog" element={<Blog />} />
+          <Route path='/restaurant-app/blog/:id' element={<Post />} />
         </Route>
       </Routes>
 

@@ -28,38 +28,38 @@ const Navbar = () => {
   return (
     <div className="app__navbar">
       <div className="app__navbar-logo">
-        <Link to="/">
+        <Link to="/restaurant-app">
           <img src={images.gericht} alt="app logo" />
         </Link>
       </div>
       <ul className="app__navbar-links">
         <li className="app__opensans">
-          <HashLink smooth to="/#home">
+          <HashLink smooth to="/restaurant-app#home">
             Home
           </HashLink>
         </li>
         <li className="app__opensans">
-          <HashLink smooth to="/#about">
+          <HashLink smooth to="/restaurant-app#about">
             About
           </HashLink>
         </li>
         <li className="app__opensans">
-          <HashLink smooth to="/#menu">
+          <HashLink smooth to="/restaurant-app#menu">
             Menu
           </HashLink>
         </li>
         <li className="app__opensans">
-          <HashLink smooth to="/#awards">
+          <HashLink smooth to="/restaurant-app#awards">
             Awards
           </HashLink>
         </li>
         <li className="app__opensans">
-          <HashLink smooth to="/#contact">
+          <HashLink smooth to="/restaurant-app#contact">
             Contact
           </HashLink>
         </li>
         <li className="app__opensans">
-          <HashLink smooth to="/blog">
+          <HashLink smooth to="/restaurant-app/blog">
             Blog
           </HashLink>
         </li>
@@ -96,7 +96,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/#home"
+                  to="/restaurant-app#home"
                   onClick={() => setToggleMenu(false)}
                 >
                   Home
@@ -105,7 +105,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/#about"
+                  to="/restaurant-app#about"
                   onClick={() => setToggleMenu(false)}
                 >
                   About
@@ -114,7 +114,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/#menu"
+                  to="/restaurant-app#menu"
                   onClick={() => setToggleMenu(false)}
                 >
                   Menu
@@ -123,7 +123,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/#awards"
+                  to="/restaurant-app#awards"
                   onClick={() => setToggleMenu(false)}
                 >
                   Awards
@@ -132,7 +132,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/#contact"
+                  to="/restaurant-app#contact"
                   onClick={() => setToggleMenu(false)}
                 >
                   Contact
@@ -141,7 +141,7 @@ const Navbar = () => {
               <li className="app__opensans">
                 <HashLink
                   smooth
-                  to="/blog"
+                  to="/restaurant-app/blog"
                   onClick={() => setToggleMenu(false)}
                 >
                   Blog
